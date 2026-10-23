@@ -1,0 +1,101 @@
+---
+title: "A-LIGN A-SCEND"
+description: "If A-LIGN is your SOC 2 auditor, your soc2doc expert can upload approved, in-period evidence straight onto the matching requests in A-SCEND, so nobody re-uploads files by hand."
+---
+
+If your SOC 2 auditor is A-LIGN, your audit requests live in A-SCEND, A-LIGN's
+audit platform. Each request has an ID, such as `R-1105` or `P-18`, and expects
+evidence attached to it. Without a connection, someone on your team downloads
+each file from wherever it lives and uploads it again, one request at a time.
+
+With the connection set up, your soc2doc expert uploads the evidence onto the
+matching A-SCEND requests for you.
+
+## How it works
+
+- **Your expert runs it.** This is expert-in-the-loop work, not a self-serve
+  button. Your soc2doc expert decides what goes to which request and runs the
+  upload.
+- **Upload is not submit.** Uploading a file does not change a request's status
+  in A-SCEND. Your team or your expert submits the request when it is ready.
+- **A-SCEND stays the auditor's system of record.** soc2doc prepares and
+  delivers the evidence; your auditor still works in A-SCEND.
+
+## What soc2doc sends
+
+- **Only approved, in-period evidence.** A file goes to A-SCEND only if it has
+  been approved in soc2doc and falls within your audit period.
+- **Each file once.** Files are deduplicated, so the same document is not sent
+  twice.
+- **Every upload is recorded.** For each upload you can see the file, the
+  request it went to, when it was sent, and who sent it, so you always know
+  what reached your auditor.
+
+<Note>
+A-SCEND does not accept files over 100 MB. That limit is A-LIGN's, not ours.
+For a larger file, your auditor provides another way to deliver it.
+</Note>
+
+## Setup
+
+<Warning>
+Only a Company Administrator in A-SCEND can create an API key. Anyone else who
+tries gets an error, so ask your Company Administrator to do steps 1 and 2.
+</Warning>
+
+<Steps>
+  <Step title="Create an API key in A-SCEND">
+    In A-SCEND, open **Settings > API Keys** and select **Create API Key**.
+  </Step>
+  <Step title="Name it so you can recognize it">
+    Give the key a name you will recognize later, such as "soc2doc push", and
+    add a note on what it is for.
+  </Step>
+  <Step title="Share the key with your expert securely">
+    Send the key and its secret to your soc2doc expert through a secure channel
+    you agree on together.
+  </Step>
+  <Step title="Confirm with a one-file test">
+    Choose a request. Your expert uploads a single file to it, and you confirm
+    you can see it in A-SCEND. After that, uploads run as normal.
+  </Step>
+</Steps>
+
+<Warning>
+Never send the key's secret by plain email or chat. Agree on a secure channel
+with your expert first.
+</Warning>
+
+## You stay in control
+
+The key acts only within your own A-SCEND account. You can regenerate or delete
+it at any time in A-SCEND at **Settings > API Keys**. Doing so stops all uploads
+from soc2doc immediately. To resume, create a new key and share it with your
+expert the same way.
+
+## FAQ
+
+<AccordionGroup>
+  <Accordion title="Does A-LIGN need to do anything?">
+    No. The connection uses A-SCEND's own Open API, which A-SCEND makes
+    available to its clients and partners. Your Company Administrator creates
+    the key; nothing is needed from your auditor.
+  </Accordion>
+  <Accordion title="Does this replace A-SCEND?">
+    No. A-SCEND remains your auditor's system of record. soc2doc is the expert
+    layer that prepares the evidence and delivers it there.
+  </Accordion>
+  <Accordion title="What about populations and samples?">
+    A population uploads like any other evidence. Once your auditor accepts a
+    population, they create sample requests in A-SCEND, and soc2doc answers
+    those next.
+  </Accordion>
+  <Accordion title="Can soc2doc read our auditor's comments or request status?">
+    Not yet. Today the connection only uploads evidence. Comments and status
+    stay in A-SCEND.
+  </Accordion>
+</AccordionGroup>
+
+<Card title="Evidence library" icon="folder-open" href="/product/evidence-library">
+  Where your evidence lives in soc2doc, organized by control family.
+</Card>

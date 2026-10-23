@@ -45,6 +45,10 @@
               "product/scenario-advisor",
               "product/third-parties"
             ]
+          },
+          {
+            "group": "Works with your auditor",
+            "pages": ["integrations/a-scend"]
           }
         ]
       },
